@@ -9,5 +9,5 @@ node_modules
 *.iws
 *.ipr
 *.ids
-*.orig
+#*.orig
 classes/
