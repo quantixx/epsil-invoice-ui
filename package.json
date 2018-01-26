@@ -1,0 +1,22 @@
+{
+  "name": "epsil-invoice-ui",
+  "version": "0.0.0",
+  "description": "The Epsil UI",
+  "main": false,
+  "scripts": {
+    "build": "lerna run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "quantixx/epsil-invoice-ui team",
+  "license": "WTFPL",
+  "devDependencies": {
+    "lerna": "^2.8.0",
+    "prettier": "^1.10.2",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.6.2"
+  },
+  "workspaces": ["packages/*"]
+}
