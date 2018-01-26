@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1101,
+    "slug": "quantixx",
+    "name": "Quantixx",
+    "companyName": "Quantixx SARL",
+    "description": null,
+    "vatIdentification": "AU12 1234 1234 1234",
+    "businessIdentification": null,
+    "businessRegistry": null,
+    "businessCode": null,
+    "financialYearFrom": null,
+    "financialYearTo": null,
+    "invoiceAddressId": 952,
+    "bankId": 1001,
+    "bankBankName": "Osie Bank",
+    "logoId": null,
+    "logoName": null,
+    "contactId": 1051,
+    "contactLastName": "Paul"
+  }
+]

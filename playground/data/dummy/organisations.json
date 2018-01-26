@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1201,
+    "slug": "oak",
+    "name": "Oak",
+    "businessIdentification": "AU 1234 0976 8765",
+    "corporateName": "Oak Incorporation",
+    "vatIdentification": "AU3456789",
+    "activated": true,
+    "createdOn": null,
+    "addressId": 953,
+    "contactId": 1052,
+    "contactLastName": "Atoak",
+    "tenantId": 1101,
+    "tenantName": "Quantixx"
+  }
+]
