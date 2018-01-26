@@ -1,0 +1,27 @@
+{
+  "name": "@epsil-invoice-ui/invoices",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/bundles/invoices.umd.js",
+  "module": "dist/@epsil-invoice-ui/invoices.es5.js",
+  "es2015": "dist/@epsil-invoice-ui/invoices.js",
+  "typings": "dist/invoices.d.ts",
+  "metadata": "dist/invoices.metadata.json",
+  "scripts": {
+    "build": "ng-packagr -p package.json",
+    "start": "chokidar *.ts src/** -c \"yarn run build\" --initial",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@angular/core": "^5.0.0"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "ng-packagr": "^1.6.0"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    }
+  }
+}

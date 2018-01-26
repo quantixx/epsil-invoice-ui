@@ -4,7 +4,7 @@
   "description": "The Epsil UI",
   "main": false,
   "scripts": {
-    "start": "yarn workspace playground run start",
+    "start": "lerna run start --parallel",
     "build": "lerna run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
