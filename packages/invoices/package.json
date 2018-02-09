@@ -9,6 +9,7 @@
   "metadata": "dist/invoices.metadata.json",
   "scripts": {
     "build": "ng-packagr -p package.json",
+    "postbuild": "cp -rf .ng_pkg_dist/* dist/ && rm -rf .ng_pkg_dist",
     "start": "chokidar *.ts src/** -c \"yarn run build\" --initial",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +23,7 @@
   "ngPackage": {
     "lib": {
       "entryFile": "public_api.ts"
-    }
+    },
+    "dest": "./.ng_pkg_dist"
   }
 }

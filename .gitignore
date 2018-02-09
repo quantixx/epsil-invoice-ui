@@ -1,5 +1,7 @@
 dist
 node_modules
+.ng-packagr
+.ng_pkg_*
 
 ######################
 # Intellij

@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import {
-  InvoicesRootComponent,
-  InvoicesModule
-} from '@epsil-invoice-ui/invoices';
+import { InvoicesModule, INVOICES_ROUTES } from '@epsil-invoice-ui/invoices';
 
 //
 
-const routes: Routes = [{ path: '', component: InvoicesRootComponent }];
+const routes: Routes = [{ path: '', children: INVOICES_ROUTES }];
 
 @NgModule({
-  declarations: [],
   imports: [InvoicesModule, RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
