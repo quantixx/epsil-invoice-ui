@@ -2,13 +2,13 @@
   "name": "@epsil-invoice-ui/invoices",
   "version": "0.0.0",
   "description": "",
-  "main": "dist/bundles/invoices.umd.js",
-  "module": "dist/@epsil-invoice-ui/invoices.es5.js",
-  "es2015": "dist/@epsil-invoice-ui/invoices.js",
-  "typings": "dist/invoices.d.ts",
-  "metadata": "dist/invoices.metadata.json",
+  "main": "dist/bundles/epsil-invoice-ui-invoices.umd.js",
+  "module": "dist/esm5/epsil-invoice-ui-invoices.js",
+  "es2015": "dist/esm2015/epsil-invoice-ui-invoices.js",
+  "typings": "dist/epsil-invoice-ui-invoices.d.ts",
+  "metadata": "dist/epsil-invoice-ui-invoices.metadata.json",
   "scripts": {
-    "build": "ng-packagr -p package.json",
+    "build": "ng-packagr -p package.json && rm -rf .ng_pkg_dist/dist dist/*",
     "postbuild": "cp -rf .ng_pkg_dist/* dist/ && rm -rf .ng_pkg_dist",
     "start": "chokidar *.ts src/** -c \"yarn run build\" --initial",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,12 +17,15 @@
     "@angular/core": "^5.0.0"
   },
   "devDependencies": {
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
     "chokidar-cli": "^1.2.0",
-    "ng-packagr": "^1.6.0"
+    "ng-packagr": "^2.0.0",
+    "tsickle": "^0.26.0"
   },
   "ngPackage": {
     "lib": {
-      "entryFile": "public_api.ts"
+      "entryFile": "index.ts"
     },
     "dest": "./.ng_pkg_dist"
   }
