@@ -13,11 +13,14 @@
   "author": "quantixx/epsil-invoice-ui team",
   "license": "WTFPL",
   "devDependencies": {
-    "lerna": "^2.8.0",
+    "lerna": "^2.9.0",
     "prettier": "^1.10.2",
-    "tslint": "5.5.0",
-    "tslint-config-prettier": "^1.6.0",
-    "typescript": "2.5.3"
+    "tslint": "5.9.1",
+    "tslint-config-prettier": "^1.8.0",
+    "typescript": "2.7.2"
   },
-  "workspaces": ["packages/*", "playground"]
+  "workspaces": [
+    "packages/*",
+    "playground"
+  ]
 }

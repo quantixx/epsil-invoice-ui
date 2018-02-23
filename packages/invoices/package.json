@@ -8,7 +8,9 @@
   "typings": "dist/epsil-invoice-ui-invoices.d.ts",
   "metadata": "dist/epsil-invoice-ui-invoices.metadata.json",
   "scripts": {
-    "build": "ng-packagr -p package.json && rm -rf .ng_pkg_dist/dist dist/*",
+    "build_prod":
+      "ng-packagr -p package.json && rm -rf .ng_pkg_dist/dist dist/*",
+    "build": "ngc -p src/tsconfig.app.json",
     "postbuild": "cp -rf .ng_pkg_dist/* dist/ && rm -rf .ng_pkg_dist",
     "start": "chokidar *.ts src/** -c \"yarn run build\" --initial",
     "test": "echo \"Error: no test specified\" && exit 1"
