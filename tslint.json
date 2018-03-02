@@ -1,3 +1,33 @@
 {
-  "extends": ["tslint:latest", "tslint-config-prettier"]
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rulesDirectory": ["codelyzer", "./node_modules/@nrwl/schematics/src/tslint"],
+  "rules": {
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": [
+      true,
+      "rxjs",
+      "@angular/common/http/testing",
+      "@angular/common/http",
+      "@angular/core/testing",
+      "@angular/router/testing"
+    ],
+    //
+    // Codelyzer options
+    //
+    "directive-selector": [true, "attribute", "epsil", "camelCase"],
+    "component-selector": [true, "element", "epsil", "kebab-case"],
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "component-class-suffix": true,
+    "directive-class-suffix": true,
+    //
+    // @nrwl/schematics options
+    //
+    "nx-enforce-module-boundaries": [true, { "lazyLoad": [], "allow": [] }]
+  }
 }

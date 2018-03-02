@@ -4,20 +4,99 @@
   "description": "The Epsil UI",
   "main": false,
   "scripts": {
-    "start": "lerna run start --parallel",
-    "build": "lerna run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:invoices": "ng-packagr -p libs/invoices/package.json",
+    "build": "run-p build:*",
+    "e2e": "ng e2e",
+    "format": "./node_modules/.bin/nx format write",
+    "lint": "ng lint --format stylish",
+    "ng": "ng",
+    "postinstall": "./node_modules/.bin/nx postinstall",
+    "serve:ng": "ng serve --app=playground",
+    "serve:server": "json-server --watch data/db.json --port 5555",
+    "start": "run-p serve:*",
+    "test": "jest"
   },
   "private": true,
   "keywords": [],
   "author": "quantixx/epsil-invoice-ui team",
   "license": "WTFPL",
-  "devDependencies": {
-    "lerna": "^2.8.0",
-    "prettier": "^1.10.2",
-    "tslint": "5.5.0",
-    "tslint-config-prettier": "^1.6.0",
-    "typescript": "2.5.3"
+  "dependencies": {
+    "@angular/animations": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/http": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "@angular/router": "^5.0.0",
+    "@ngrx/effects": "5.1.0",
+    "@ngrx/router-store": "5.0.1",
+    "@ngrx/store": "5.1.0",
+    "@ngrx/store-devtools": "5.1.0",
+    "@nrwl/nx": "^0.8.0",
+    "bootstrap": "^4.0.0",
+    "core-js": "^2.4.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9",
+    "rxjs": "^5.5.2",
+    "zone.js": "^0.8.14"
   },
-  "workspaces": ["packages/*", "playground"]
+  "jest": {
+    "preset": "jest-preset-angular",
+    "testRegex": "spec.ts$",
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.spec.json"
+      },
+      "__TRANSFORM_HTML__": true
+    },
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/config",
+      "/dist/"
+    ],
+      "collectCoverageFrom": [
+        "{apps|libs}/*/src/**/*.ts",
+        "!config/*.ts",
+        "!{apps|libs}/*/src/**/*{module|routing}.ts",
+        "!apps/*/src/environments/*.ts",
+        "!apps/*/src/main.ts",
+        "!apps/*/src/typings.d.ts",
+        "!apps/*/src/polyfills.ts"
+    ],
+    "moduleNameMapper": {
+      "@@epsil-invoice-ui/(.*)": "<rootDir>/libs/$1"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/config/setupJest.ts"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.7.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/language-service": "^5.0.0",
+    "@nrwl/schematics": "^0.8.0",
+    "@types/jest": "^22.1.4",
+    "@types/node": "^9.4.6",
+    "codelyzer": "^4.2.1",
+    "jasmine-core": "^3.1.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "jest": "^22.4.2",
+    "jest-preset-angular": "^5.2.0",
+    "json-server": "^0.12.1",
+    "ng-packagr": "^2.1.0",
+    "ng2-mock-component": "^0.1.1",
+    "npm-run-all": "^4.1.2",
+    "prettier": "1.11.1",
+    "protractor": "^5.1.2",
+    "ts-node": "~5.0.0",
+    "tsickle": "^0.27.0",
+    "tslib": "^1.9.0",
+    "tslint": "~5.8.0",
+    "tslint-config-prettier": "^1.9.0",
+    "typescript": "~2.6.0"
+  }
 }
