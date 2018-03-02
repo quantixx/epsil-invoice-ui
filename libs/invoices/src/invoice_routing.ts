@@ -1,12 +1,11 @@
 //
 
 import { Routes } from '@angular/router';
-import { InvoicesRootComponent } from './invoice_component';
+import { TableViewComponent } from './table/containers/table-view/table-view.component';
 
 //
 
 export const INVOICES_ROUTES: Routes = [
-  { path: '', component: InvoicesRootComponent }
+  { path: 'table', component: TableViewComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'table' }
 ];
-
-export const ROUTING_COMPONENTS = [InvoicesRootComponent];

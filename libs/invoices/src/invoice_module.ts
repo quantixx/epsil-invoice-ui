@@ -1,12 +1,13 @@
 //
 
 import { NgModule } from '@angular/core';
-import { InvoicesRootComponent } from './invoice_component';
+import { RouterModule } from '@angular/router';
+import { TableModule } from './table/table.module';
 
 //
 
 @NgModule({
-  declarations: [InvoicesRootComponent],
-  imports: []
+  exports: [RouterModule],
+  imports: [RouterModule, TableModule]
 })
 export class InvoicesModule {}
