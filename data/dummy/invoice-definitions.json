@@ -4,20 +4,19 @@
     "title": "Invoice definition for common invoices",
     "description": null,
     "docType": "INVOICE",
-    "vatRate": 20.0,
     "terms": "30 days after the end of the mon",
     "penalties": "20% penalties after 30 days of not paying the invoice",
     "familyId": 1251,
     "familyName": "Sponsor",
     "languageId": 17,
     "languageName": "Basque",
+    "vatRate": 20.0,
     "vatRates": [
-      {
-        "vatRate": "0",
-        "vatRate": "5",
-        "vatRate": "10",
-        "vatRate": "20"
-      }
+      0.0,
+      5.5,
+      7.5,
+      10.0,
+      20.0
     ],
     "tenantId": 1101,
     "tenantName": "Quantixx"
