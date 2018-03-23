@@ -1,3 +1,12 @@
 //
 
 @import 'bootstrap/dist/css/bootstrap.css';
+
+// Additionnal global classes
+
+.table-boderless {
+  th,
+  td {
+    border: none;
+  }
+}
