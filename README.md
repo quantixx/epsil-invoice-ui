@@ -9,6 +9,15 @@ This creates a set of APIs on `http://localhost:5555`
 
 ## APIs
 
-GET `/tenants/1101`
-GET `/invoice-definition-invoice/1301`
-GET `/organisations?name.contains=xxx`
+When you click on Create An Invoice Button:
+
+* GET `/tenants/1101`
+* GET `/invoice-definition/1301`
+
+Invoice is displayed on screen, enter organization name :
+
+* GET `/organisations?name.contains=xxx`
+
+Then create the invoice
+
+* POST `/invoices`
