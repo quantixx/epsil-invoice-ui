@@ -9,4 +9,4 @@ This creates a set of APIs on `http://localhost:5555`
 
 ## APIs
 
-`/organisations?name.contains=xxx`
+GET `/organisations?name.contains=xxx`
