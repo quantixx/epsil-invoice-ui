@@ -9,5 +9,6 @@ This creates a set of APIs on `http://localhost:5555`
 
 ## APIs
 
-GET `/organisations?name.contains=xxx`
+GET `tenants/1101`
 GET `/invoice-definition-invoice/1301`
+GET `/organisations?name.contains=xxx`
