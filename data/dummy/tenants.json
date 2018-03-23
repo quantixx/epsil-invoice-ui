@@ -9,6 +9,7 @@
     "businessIdentification": null,
     "businessRegistry": null,
     "businessCode": null,
+    "businessAdditionalInformation": "SARL au capital de 3 000 euros",
     "invoiceAddress": {
       "id": 953,
       "street": "Blue Flower",
