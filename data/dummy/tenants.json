@@ -34,7 +34,14 @@
     },
     "logoId": null,
     "logoName": null,
-    "contactId": 1051,
-    "contactLastName": "Paul"
+    "contact":   {
+      "id": 1052,
+      "firstName": "John",
+      "lastName": "Atoak",
+      "activated": true,
+      "email": "john@oak.com",
+      "phoneArea": "+33",
+      "phoneNumber": "09 87 65 43 32"
+    }
   }
 ]
