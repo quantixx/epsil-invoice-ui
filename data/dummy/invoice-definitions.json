@@ -11,6 +11,14 @@
     "familyName": "Sponsor",
     "languageId": 17,
     "languageName": "Basque",
+    "vatRates": [
+      {
+        "vatRate": "0",
+        "vatRate": "5",
+        "vatRate": "10",
+        "vatRate": "20"
+      }
+    ],
     "tenantId": 1101,
     "tenantName": "Quantixx"
   }
