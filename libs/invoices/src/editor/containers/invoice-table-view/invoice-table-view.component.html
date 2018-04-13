@@ -16,17 +16,17 @@
           placeholder="Indiquez ici votre description">
       </td>
       <td>
-        <input type="number" #quantity
+        <input type="number" [(ngModel)]="invoiceLine.quantity"
           class="form-control"
           placeholder="" (blur)="calculate()">
       </td>
       <td>
-        <input type="number" #price
+        <input type="number" [(ngModel)]="invoiceLine.price"
           class="form-control"
           placeholder="" (blur)="calculate()">
       </td>
       <td class="text-right">
-        {{quantity.value * price.value}}
+        {{invoiceLine.quantity * invoiceLine.price}}
       </td>
 
       <button class="delete-btn btn position-absolute"
@@ -51,7 +51,7 @@
         TOTAL HT
       </td>
       <td class="text-right">
-        0.00 €
+        {{sumTotal(invoiceLines)}}
       </td>
     </tr>
     <tr>

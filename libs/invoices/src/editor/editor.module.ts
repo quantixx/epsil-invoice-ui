@@ -7,11 +7,12 @@ import { EditorLayoutComponent } from './components/editor-layout/editor-layout.
 import { EditorViewComponent } from './containers/editor-view/editor-view.component';
 import { TenantViewComponent } from './containers/tenant-view/tenant-view.component';
 import { InvoiceTableViewComponent } from './containers/invoice-table-view/invoice-table-view.component';
+import {FormsModule} from "@angular/forms";
 
 //
 
 @NgModule({
   declarations: [EditorViewComponent, EditorLayoutComponent, TenantViewComponent, ClientViewComponent, InvoiceTableViewComponent],
-  imports: [CommonModule]
+  imports: [CommonModule, FormsModule]
 })
 export class EditorModule {}

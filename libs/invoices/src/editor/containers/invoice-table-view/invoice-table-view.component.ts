@@ -1,4 +1,9 @@
-import {ChangeDetectorRef, Component} from '@angular/core';
+import {Component} from '@angular/core';
+
+interface InvoiceLine {
+  quantity: number;
+  price: number;
+}
 
 @Component({
   selector: 'epsil-invoice-table-view',
@@ -8,9 +13,6 @@ import {ChangeDetectorRef, Component} from '@angular/core';
 export class InvoiceTableViewComponent {
   public invoiceLines: Array<{}> = [{}];
 
-  constructor(private ref: ChangeDetectorRef) {
-  }
-
   public addLine() {
     this.invoiceLines = this.invoiceLines.concat([{}]);
   }
@@ -19,9 +21,10 @@ export class InvoiceTableViewComponent {
     this.invoiceLines = this.invoiceLines.filter((_, i) => i !== index);
   }
 
-  public calculate() {
-    this.ref.markForCheck();
+  public sumTotal(invoiceLines: InvoiceLine[]) {
+    return invoiceLines.reduce(
+      (acc, invoiceLine) => acc + invoiceLine.quantity * invoiceLine.price,
+      0
+    )
   }
-
-
 }
