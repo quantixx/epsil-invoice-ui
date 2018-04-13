@@ -5,11 +5,12 @@ import { NgModule } from '@angular/core';
 import { EditorLayoutComponent } from './components/editor-layout/editor-layout.component';
 import { EditorViewComponent } from './containers/editor-view/editor-view.component';
 import { TenantViewComponent } from './containers/tenant-view/tenant-view.component';
+import { ClientViewComponent } from './containers/client-view/client-view.component';
 
 //
 
 @NgModule({
-  declarations: [EditorViewComponent, EditorLayoutComponent, TenantViewComponent],
+  declarations: [EditorViewComponent, EditorLayoutComponent, TenantViewComponent, ClientViewComponent],
   imports: [CommonModule]
 })
 export class EditorModule {}
