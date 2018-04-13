@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 
 @Component({
   selector: 'epsil-invoice-table-view',
@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class InvoiceTableViewComponent {
   public invoiceLines: Array<{}> = [{}];
 
+  constructor(private ref: ChangeDetectorRef) {
+  }
+
   public addLine() {
     this.invoiceLines = this.invoiceLines.concat([{}]);
   }
@@ -15,4 +18,10 @@ export class InvoiceTableViewComponent {
   public removeLine(index: number) {
     this.invoiceLines = this.invoiceLines.filter((_, i) => i !== index);
   }
+
+  public calculate() {
+    this.ref.markForCheck();
+  }
+
+
 }

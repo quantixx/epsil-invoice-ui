@@ -16,17 +16,17 @@
           placeholder="Indiquez ici votre description">
       </td>
       <td>
-        <input type="text"
+        <input type="number" #quantity
           class="form-control"
-          placeholder="">
+          placeholder="" (blur)="calculate()">
       </td>
       <td>
-        <input type="text"
+        <input type="number" #price
           class="form-control"
-          placeholder="">
+          placeholder="" (blur)="calculate()">
       </td>
       <td class="text-right">
-
+        {{quantity.value * price.value}}
       </td>
 
       <button class="delete-btn btn position-absolute"
